@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="icon" href="https://cdn3.vectorstock.com/i/1000x1000/97/37/photo-camera-icon-vector-21679737.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome!</h1>
+
+    <header>
+        <nav class="navigation">
+            <a href="about.html">About</a>
+            
+                <select id="colorSelect" onchange="color(this.value)">
+                    <option value="">Customize</option>
+                    <option value="black">Black</option>
+                    <option value="#91C8E4">Sky color</option>
+                    <option value="#EF6262">Soft Orange</option>
+                    <option value="#85A389">Olive</option>
+                    <option value="#7F8487">Grey</option>
+              
+                </select>
+            
+                <a href="#" id="add-more-link">
+                    <ion-icon name="add-circle-outline"></ion-icon>Add more
+                </a>
+      
+                
+     
+           <a href = "login.html">
+             <button class = "btnLogin-popup">Login</button>
+             </a>
+        </nav>
+    </header>
+        <!--TODO: Here will be added a menu bar with icons:About the page (static) -> CHECK 
+            Add more photos (dynamic) 
+            TODO: add a button with some background colors for user to choose for the main page -> CHECK
+            TODO: login register page -> CHECK 
+        -->
+    <div class="main-img" id="fullImgBox">
+        <img src="gallery/1.jpg" id="fullImg">
+
+        <span onclick="closeFullImg()"><ion-icon name="close-circle-outline"></ion-icon></span>
+    </div>
+    <div class="photo-container">
+        <img src="gallery/1.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/2.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/3.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/4.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/5.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/6.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/7.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/8.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/9.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/10.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/11.jpg" onclick="openFullImg(this.src)">
+        <img src="gallery/12.jpg" onclick="openFullImg(this.src)">
+        <!--<img src="gallery/13.jpg" onclick="openFullImg(this.src)">-->
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="functions.js"></script>
+</body>
+</html>
